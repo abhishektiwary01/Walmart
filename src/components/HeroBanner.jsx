@@ -10,23 +10,17 @@ const HeroBanner = () => {
         </span>
         
         <span className='card-span-large'>
-        <img className='hero-img' src='src\assets\images\Camera-banner.webp'></img>
+        <img className='hero-img' src='https://drive.google.com/file/d/1-5-pv-okDV5C1JIH7bMWp1qjPeuy0vpJ/view?usp=sharing'></img>
         
         </span>
         
         <span className='card-span-small'>
-        <img className='hero-img' src='src\assets\images\styles-banner.webp'></img>
+        <img className='hero-img' src='https://drive.google.com/file/d/1Ql-s3mo7_-ib68mQru25vUCFMNNWXKRl/view?usp=sharing'></img>
         
         </span>
 
      </span>
         
-     git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/abhishektiwary01/Walmart.git
-git push -u origin main
      <span className='hero-span'>
         <span className='hero-span-card' style={{ height: '400px'}}>
             
