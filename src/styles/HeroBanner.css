@@ -1,0 +1,87 @@
+.hero-container{
+    display: flex;
+    flex-direction: row;
+}
+.hero-span{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 900px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.hero-span-small{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 900px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.card-span-small{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 30%;
+background-color: aqua;
+margin-top: 10px;
+border: 1px solid black;
+border-radius: 20px;
+cursor: pointer;
+}
+.card-span-large{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    background-color: aqua;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.hero-span-card{
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    background-color: aqua;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.discount-banner {
+    margin: 20px; /* Push it to the bottom of the container */
+    height: 60px;
+    padding: 10px 20px;
+    justify-content: center;
+    background-color: #f8f8f8; /* Example background */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: medium;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+.discount-banner button {
+    margin-left: 10px;
+    padding: 5px 15px;
+    background-color: white;
+    font-weight:600;
+    color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 20px;
+  }
+  
+  .discount-banner button:hover {
+    background-color: #005bb5;
+  }
+  .hero-img{
+    object-fit: cover;
+  }

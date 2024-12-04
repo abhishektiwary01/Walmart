@@ -1,0 +1,41 @@
+.carousel-inner{
+margin: 10px;
+}
+
+/* Style for card heading */
+.card-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  /* Wrapper for carousel cards */
+  .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  /* Individual card styling */
+  .card {
+    width: 14rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }

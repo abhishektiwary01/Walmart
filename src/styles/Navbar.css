@@ -1,0 +1,35 @@
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin: 0;
+    height: 60px;
+    align-items: center;
+    padding: 4px;
+   
+}
+.dropdown{
+    display: flex;
+    flex-direction: row;
+}
+.btn-nav{
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    border: none;
+    margin: 20px;
+}
+.btn-nav:hover{
+    background-color: white;
+    border: 1px solid black;
+    color:black;
+}
+.navbar{
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+}
