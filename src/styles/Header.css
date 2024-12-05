@@ -86,9 +86,10 @@
 }
 
 .btn:hover {
-    background-color: #124f7d; /* Hover color */
-  }
-.button-content {
+    background-color: #124f7d; 
+}
+
+  .button-content {
     display: flex;
     flex-direction: column; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -98,7 +99,7 @@
 }
 .btn:focus,
 .btn:active {
-  background-color: #224569; /* Darker blue when clicked */
+  background-color: #224569; 
   outline: none;
 }
 .address-image{
@@ -111,11 +112,13 @@
     border-radius: 100%;
     object-fit: cover;
     cursor: pointer;
+    text-align: center;
     
 }
 .address-label{
     font-weight: bolder;
     color: white;    
+    
 }
 .ship-image{
     border-radius: 100%;
@@ -129,16 +132,13 @@
 .form-control{
 border-radius: 30px;
 }
-/* .form-control:hover{
-border: 2px solid;
-border-radius: 0%;
-} */
 
 .cart{
 justify-content: center;
 align-items: center;
 padding: 10px;
 }
+
 .cart-buttons {
 background-color: transparent;
 color:white;
@@ -172,7 +172,45 @@ align-items: center;
 
 .hero-objects img, 
 .hero-objects video {
-    object-fit: cover; /* or contain, fill, etc., depending on your needs */
-    width: 100%; /* Optional: Adjust width if needed */
-    height: 100%; /* Optional: Adjust height if needed */
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%;
 }
+.search-box {
+    position: relative;
+    display: inline-flex;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 10px ; 
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .search-box button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: white;
+    right: 2%;
+    top: 30%;
+    transform: translateY(-50%) ;
+  }
+  .search-box .search-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #1d6eac;
+    border-radius: 100%;
+  }
+  
+
+  

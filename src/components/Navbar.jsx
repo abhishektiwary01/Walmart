@@ -2,64 +2,77 @@ import React from 'react';
 import '../styles/Navbar.css'
 import { CiGrid41 } from "react-icons/ci";
 import { IoGridOutline } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
+
 const Navbar = () => {
   return (
     <div className='navbar-container'>
-      <div class="dropdown">
-  <button class="btn-nav btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <IoGridOutline /> Department
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="d-flex">
+          
+          <div className="dropdown mr-3">
+            <button className="btn-nav btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <IoGridOutline /> Department
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a className="dropdown-item" href="#">Action</a>
+              <a className="dropdown-item" href="#">Another action</a>
+              <a className="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
 
-<div class="dropdown">
-  <button class="btn-nav btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <CiGrid41 /> Services
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-      <span>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">Navbar</a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <div className="dropdown">
+            <button className="btn-nav btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <CiGrid41 /> Services
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a className="dropdown-item" href="#">Action</a>
+              <a className="dropdown-item" href="#">Another action</a>
+              <a className="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+         |
+        {/* Navbar brand and collapsible items */}
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNav" >
+          <ul className="navbar-nav" style={{ height: '40px' ,width: '1200px'}}>
             <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
+              <a className="nav-link" href="#">Holiday Savings</a>
+            </li>
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Grocery & Essentials</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
+              <a className="nav-link" href="#">Christmas Shop</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
+              <a className="nav-link" href="#">Gift Shop</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">ToyShop</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">New and Trending</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">Fashion</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">Electronics</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">One Cash</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link " href="#" tabIndex="-1" aria-disabled="true">Walmart+</a>
+            </li>
+           
           </ul>
         </div>
       </nav>
-      </span>
     </div>
   );
 };

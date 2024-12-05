@@ -55,31 +55,42 @@ export const Header = () => {
   </div>
     {/* SearchBar  */}
 
-      <div class="input-group">
-           <input type="search" class="form-control" placeholder="Search everything in walmart and in store" aria-label="Search" aria-describedby="search-addon" ></input>
-          
-      </div>
-
+    <div className="search-box">
+  <input 
+    id="search-input" 
+    type="search" 
+    className="form-control" 
+    placeholder="Search everything at Walmart online and in store"
+  />
+  <button id="search-box button" type="button" className="btn">
+  <img 
+      src="src\assets\icons\vector-search-icon.png" 
+      alt="Search" 
+      className="search-icon"
+    />
+  </button>
+</div>
 
     {/* Cart Section  */}
 
     <div className='cart'>
         <span>
             
-            <button className='cart-buttons'>Reorder
-            <MdOutlineFavoriteBorder /> 
-            <p className='cart-label'>My Items</p></button>
+            <button className='cart-buttons'>   
+            
+            <p className='cart-label'><MdOutlineFavoriteBorder /> Reorder My Items</p></button>
         </span>
+        
         <span>
        
-            <button className='cart-buttons'>Sign In
-            <RiAccountCircleLine />
-                <p className='cart-label'>Accounts</p>
+            <button className='cart-buttons'><p className='cart-label'>
+            <RiAccountCircleLine />Sign In Accounts</p>
             </button>
         </span>
+        
         <span>
             <button className='cart-buttons'>
-                <IoCartOutline className='cart-icon'></IoCartOutline>
+              <IoCartOutline className='cart-icon'></IoCartOutline>
                 <p>$ 1.00</p>
             </button>
         </span>

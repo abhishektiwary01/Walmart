@@ -4,13 +4,14 @@ margin: 10px;
 
 /* Style for card heading */
 .card-heading {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 1rem 0;
+    font-size: large;
+    font-weight:600;
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 10px;
+   
   }
   
-  /* Wrapper for carousel cards */
   .cards-wrapper {
     display: flex;
     justify-content: center;
@@ -39,3 +40,37 @@ margin: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
   }
+/* Parent container */
+.category {
+  display: flex; /* Use flexbox to align items in a row */
+  flex-wrap: wrap; /* Allow wrapping if items overflow the container */
+  justify-content: center; /* Center items horizontally */
+  gap: 15px; /* Add space between cards */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+/* Individual cards */
+.category-card {
+  display: flex;
+  flex-direction: column; /* Align image and text vertically */
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 10px; 
+  border-radius: 50%;
+}
+
+.category-card img {
+  width: 100%; /* Make the image responsive */
+  /* height: auto;  */
+  border-radius: 50%; /* Optional: Rounded corners for the image */
+}
+
+.category-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
