@@ -1,0 +1,50 @@
+/* Full-screen container with centered alignment */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray */
+  }
+  
+  /* Card container for login form */
+  .login-card {
+    width: 100%;
+    max-width: 400px; /* Restrict the max width */
+    background-color: #ffffff; /* White background */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 2rem; /* Padding inside the card */
+  }
+  
+  /* Error message styling */
+  #error {
+    font-size: 0.9rem; /* Slightly smaller font */
+    font-weight: 500; /* Medium weight for emphasis */
+  }
+  
+  /* Submit button hover and disabled states */
+  #login-btn {
+    transition: background-color 0.3s ease; 
+    text-align: center;
+  }
+  
+  #login-btn:hover:not([disabled]) {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  #login-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Sign-up link styling */
+  a.text-decoration-underline {
+    font-weight: 500; /* Slightly bolder font */
+  }
+  
+  a.text-decoration-underline:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #004085; /* Darker primary color */
+  }
+  

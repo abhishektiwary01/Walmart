@@ -1,0 +1,42 @@
+.middle-banner{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+.middle-banner-span{
+    display:flex;
+    width: 30%;
+    height: 100%;
+    background-color: aliceblue;
+    margin: 10px;
+    border-radius: 20px;
+}
+.middle-banner-heading{
+    font-weight: bold;
+    font-size: large;
+    margin: 30px;
+    margin-left: 50px;
+}
+.middle-banner-span {
+    display: flex;
+    height: 350px;
+    background: white;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden; /* Prevent the image from overflowing */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .middle-banner-span img {
+    width: 100%; /* Make the image fill the width of the parent div */
+    height: 100%; /* Make the image fill the height of the parent div */
+    object-fit: cover; /* Maintain the image aspect ratio while covering the div */
+    border-radius: 20px; /* Match the parent div's border radius */
+  }
+  

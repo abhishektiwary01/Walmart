@@ -3,12 +3,28 @@ import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
 import '../styles/Header.css'
+import { useNavigate } from 'react-router-dom';
+
 export const Header = () => {
+
+  const navigate = useNavigate();
+
+  const handlehomeclick = () => {
+    // Navigate to a different route
+    navigate('/');
+  };
+
+  const handlesignIn = () =>{
+    navigate('/login')
+  }
+
   return (
     <div className='header-container'>
      {/* logo  */}
-     <div className='logo-holder'>
-     <img src ='src\assets\logo\walmart-logo.png'/>
+    
+    
+     <div className='logo-holder' role='button'>
+     <img src ='src\assets\logo\walmart-logo.png' onClick={handlehomeclick}/>
      </div>     
      
      {/* Header Section  */}
@@ -50,7 +66,10 @@ export const Header = () => {
             <span className='address-span'>
               <button className='address-button'> Add Address</button>
             </span>
-            <span className='address-span'>Store</span>
+            <span className='address-span'>
+              <p>Canada SuperCenter</p>
+              <p>2nd main, Alp square,Ottawa</p>
+            </span>
             </ul>
   </div>
     {/* SearchBar  */}
@@ -62,9 +81,9 @@ export const Header = () => {
     className="form-control" 
     placeholder="Search everything at Walmart online and in store"
   />
-  <button id="search-box button" type="button" className="btn">
+  <button id="search-box button" type="button" className="btn-one">
   <img 
-      src="src\assets\icons\vector-search-icon.png" 
+      src="src\assets\icons\blue-search-icon-23.jpg" 
       alt="Search" 
       className="search-icon"
     />
@@ -77,14 +96,16 @@ export const Header = () => {
         <span>
             
             <button className='cart-buttons'>   
-            
-            <p className='cart-label'><MdOutlineFavoriteBorder /> Reorder My Items</p></button>
+            Reorder 
+            <p className='cart-label'>My Items</p></button>
         </span>
         
         <span>
        
-            <button className='cart-buttons'><p className='cart-label'>
-            <RiAccountCircleLine />Sign In Accounts</p>
+            <button className='cart-buttons' onClick={handlesignIn }>
+            Sign In   
+            <p className='cart-label'>
+            Accounts</p>
             </button>
         </span>
         

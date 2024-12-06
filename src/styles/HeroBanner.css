@@ -1,87 +1,115 @@
-.hero-container{
-    display: flex;
-    flex-direction: row;
+/* Hero container styles */
+.hero-banner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-.hero-span{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 900px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 20px;
-    cursor: pointer;
+
+.section-a, .section-b, .section-c {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 1000px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  flex-grow: 1; /* Ensure sections shrink/grow proportionally */
 }
-.hero-span-small{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 900px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 20px;
-    cursor: pointer;
+.left-span {
+  display: flex;
+  height: 350px;
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  overflow: hidden; /* Prevent image overflow */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  cursor: pointer;
 }
-.card-span-small{
-display: flex;
-flex-direction: column;
-width: 100%;
-height: 30%;
-background-color: aqua;
-margin-top: 10px;
-border: 1px solid black;
-border-radius: 20px;
-cursor: pointer;
+
+.left-span img {
+  width: 100%; /* Make the image fill the width of the div */
+  height: 100%; /* Make the image fill the height of the div */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  border-radius: 20px; /* Match the parent div's border radius */
 }
-.card-span-large{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50%;
-    background-color: aqua;
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
+.middle-span {
+  display: flex;
+  height: 350px;
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  overflow: hidden; /* Prevent image overflow */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
 }
-.hero-span-card{
-    display: flex;
-    /* flex-direction: column; */
-    width: 100%;
-    background-color: aqua;
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
+
+.middle-span img {
+  width: 100%; /* Make the image fill the width of the div */
+  height: 100%; /* Make the image fill the height of the div */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  border-radius: 20px; /* Match the parent div's border radius */
 }
-.discount-banner {
-    margin: 20px; /* Push it to the bottom of the container */
-    height: 60px;
-    padding: 10px 20px;
-    justify-content: center;
-    background-color: #f8f8f8; /* Example background */
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: medium;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.right-span {
+  display: flex;
+  height: 350px;
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  overflow: hidden; /* Prevent image overflow */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.right-span img {
+  width: 100%; /* Make the image fill the width of the div */
+  height: 100%; /* Make the image fill the height of the div */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+  border-radius: 20px; /* Match the parent div's border radius */
+}
+
+
+/* Adjust layout for smaller screens */
+@media (max-width: 1024px) {
+  .section-a, .section-b, .section-c {
+    width: 45%; /* Adjust section width for medium screens */
+    height: auto; /* Allow height to adapt to content */
   }
-.discount-banner button {
-    margin-left: 10px;
-    padding: 5px 15px;
-    background-color: white;
-    font-weight:600;
-    color: black;
-    border: 1px solid black;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: medium;
-    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .section-a, .section-b, .section-c {
+    width: 100%; /* Stack sections vertically */
+    height: auto;
   }
-  
-  .discount-banner button:hover {
-    background-color: #005bb5;
+
+  .hero-banner-container {
+    flex-direction: column; /* Stack all sections vertically */
+    align-items: stretch;
   }
-  .hero-img{
-    border-radius: 20px;
+}
+
+.left-span, .right-span {
+  display: flex;
+  height: 350px;
+  background: rgb(218, 216, 216);
+  border-radius: 20px;
+  margin: 5px;
+}
+.middle-span{
+  display: flex;
+  height: 500px;
+  background: rgb(218, 216, 216);
+  border-radius: 20px;
+  margin: 5px;
+}
+/* Adjust spans for smaller screens */
+@media (max-width: 768px) {
+  .left-span, .middle-span, .right-span {
+    height: auto; /* Adjust height to content */
+    margin: 5px; /* Reduce margin for smaller screens */
   }
+}
