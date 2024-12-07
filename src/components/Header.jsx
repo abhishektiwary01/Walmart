@@ -24,7 +24,7 @@ export const Header = () => {
     
     
      <div className='logo-holder' role='button'>
-     <img src ='src\assets\logo\walmart-logo.png' onClick={handlehomeclick}/>
+     <img src ='...\logo\walmart-logo.png' onClick={handlehomeclick}/>
      </div>     
      
      {/* Header Section  */}
