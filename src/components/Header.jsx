@@ -83,7 +83,7 @@ export const Header = () => {
   />
   <button id="search-box button" type="button" className="btn-one">
   <img 
-      src="src\assets\icons\blue-search-icon-23.jpg" 
+      src="public\blue-search-icon-23.jpg" 
       alt="Search" 
       className="search-icon"
     />
