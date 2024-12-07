@@ -26,7 +26,7 @@ export const Header = () => {
     
     
      <div className='logo-holder' role='button'>
-     <img src ='https://s3.amazonaws.com/www-inside-design/uploads/2018/04/walmart-square.jpg' onClick={handlehomeclick}/>
+     <img src ='https://static.vecteezy.com/system/resources/previews/018/930/243/original/walmart-transparent-logo-free-png.png' onClick={handlehomeclick}/>
      </div>     
      
      {/* Header Section  */}
