@@ -45,6 +45,7 @@
   overflow: hidden; /* Prevent image overflow */
   justify-content: center; /* Center image horizontally */
   align-items: center; /* Center image vertically */
+  cursor: pointer;
 }
 
 .middle-span img {
@@ -62,6 +63,7 @@
   overflow: hidden; /* Prevent image overflow */
   justify-content: center; /* Center image horizontally */
   align-items: center; /* Center image vertically */
+  cursor: pointer;
 }
 
 .right-span img {

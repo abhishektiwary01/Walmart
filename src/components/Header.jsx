@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
@@ -19,6 +19,16 @@ export const Header = () => {
   const handlesignIn = () =>{
     navigate('/login')
   }
+
+  const [query, setQuery] = useState('');
+
+  const handleSearch = () => {
+    if (query) {
+      // For example, redirect to a search results page or call an API.
+      window.location.href = `https://www.walmart.com/search/?query=${query}`;
+    }
+  };
+  
 
   return (
     <div className='header-container'>
@@ -41,7 +51,7 @@ export const Header = () => {
 >
             <img 
                className="store-image" 
-               src="src\assets\images\shipping.jpg" 
+               src="https://img.freepik.com/premium-vector/bus-import-icon-outline-vector-cargo-truck-car-ship-color-flat_96318-120313.jpg?w=826" 
                alt="Store" 
              />
              <div className="button-content">
@@ -78,20 +88,32 @@ export const Header = () => {
     {/* SearchBar  */}
 
     <div className="search-box">
-  <input 
-    id="search-input" 
-    type="search" 
-    className="form-control" 
-    placeholder="Search everything at Walmart online and in store"
-  />
-  <button id="search-box button" type="button" className="btn-one">
-  <img 
-      src="https://tse2.mm.bing.net/th?id=OIP.l49NVOjxGUb7NTFQiFGzhwHaHa&pid=Api&P=0&h=180" 
-      alt="Search" 
-      className="search-icon"
-    />
-  </button>
-</div>
+      <input
+        id="search-input"
+        type="search"
+        className="form-control"
+        placeholder="Search everything at Walmart online and in store"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)} // Update query state
+        onKeyPress={(e) => { // Add onKeyPress to handle "Enter" key
+          if (e.key === 'Enter') {
+            handleSearch();
+          }
+        }}
+      />
+      <button
+        id="search-box button"
+        type="button"
+        className="btn-one"
+        onClick={handleSearch} // Call search function on click
+      >
+        <img
+          src="https://tse2.mm.bing.net/th?id=OIP.l49NVOjxGUb7NTFQiFGzhwHaHa&pid=Api&P=0&h=180"
+          alt="Search"
+          className="search-icon"
+        />
+      </button>
+    </div>
 
     {/* Cart Section  */}
 
