@@ -4,6 +4,8 @@ import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
 import '../styles/Header.css'
 import { useNavigate } from 'react-router-dom';
+import { LiaStoreAltSolid } from "react-icons/lia";
+import { CiLocationOn } from "react-icons/ci";
 
 export const Header = () => {
 
@@ -24,7 +26,7 @@ export const Header = () => {
     
     
      <div className='logo-holder' role='button'>
-     <img src ='...\logo\walmart-logo.png' onClick={handlehomeclick}/>
+     <img src ='src\assets\logo\walmart-logo.png' onClick={handlehomeclick}/>
      </div>     
      
      {/* Header Section  */}
@@ -44,7 +46,7 @@ export const Header = () => {
              />
              <div className="button-content">
                <p>How do you want your items?</p>
-               <p>Address</p>
+               <p><LiaStoreAltSolid className='store-icon' />Alp Supercenter</p>
              </div>
          </button>
 
@@ -63,12 +65,13 @@ export const Header = () => {
                 <p  className='address-label'> Delivery</p>
                 </span>
             </span>
-            <span className='address-span'>
+            <span className='address-store'>
+              <p className='address-detail'> <CiLocationOn  className='store-icon' /> Add an address for shipping </p>
               <button className='address-button'> Add Address</button>
             </span>
-            <span className='address-span'>
-              <p>Canada SuperCenter</p>
-              <p>2nd main, Alp square,Ottawa</p>
+            <span className='address-store'>
+              <p className='address-detail'> <LiaStoreAltSolid  className='store-icon'/> Nearest Store:</p>
+              <p className='address-detail-small'>Alp Supercenter,Gerber Raod,Ottawa,Canada,96473</p>
             </span>
             </ul>
   </div>
@@ -83,7 +86,7 @@ export const Header = () => {
   />
   <button id="search-box button" type="button" className="btn-one">
   <img 
-      src="public\blue-search-icon-23.jpg" 
+      src="src\assets\icons\blue-search-icon-23.jpg" 
       alt="Search" 
       className="search-icon"
     />

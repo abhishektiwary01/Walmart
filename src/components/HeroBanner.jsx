@@ -28,7 +28,7 @@ const HeroBanner = () => {
        <div className='section-c'> 
        
        <div className='right-span'>
-       <img src="https://github.com/abhishektiwary01/Walmart/blob/main/src/assets/images/christmas-offer.jpg"/>
+       <img src="src\assets\images\christmas-offer.jpg"/>
        </div>  
        <div className='right-span'>
        <img src="src\assets\images\flash-deals.jpg"/>

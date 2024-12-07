@@ -1,42 +1,19 @@
-.middle-banner{
+.middle-banner {
     display: flex;
-    flex-direction: row;
-    width: 98%;
-    height: 600px;
-    background-color: white;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 10px;
-}
-.middle-banner-span{
-    display:flex;
-    width: 30%;
-    height: 100%;
-    background-color: aliceblue;
-    margin: 10px;
-    border-radius: 20px;
-}
-.middle-banner-heading{
-    font-weight: bold;
-    font-size: large;
-    margin: 30px;
-    margin-left: 50px;
-}
-.middle-banner-span {
-    display: flex;
-    height: 350px;
-    background: white;
-    border-radius: 20px;
-    margin: 10px;
-    overflow: hidden; /* Prevent the image from overflowing */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    flex-wrap: wrap;         /* Allows wrapping if container width is smaller */
+    justify-content: center; /* Centers the images horizontally */
+    gap: 20px;               /* Adds spacing between images */
   }
   
-  .middle-banner-span img {
-    width: 100%; /* Make the image fill the width of the parent div */
-    height: 100%; /* Make the image fill the height of the parent div */
-    object-fit: cover; /* Maintain the image aspect ratio while covering the div */
-    border-radius: 20px; /* Match the parent div's border radius */
+  .middle-banner-item {
+    flex: 1 1 calc(16.66% - 20px); /* Allocates ~16.66% of the row width to each item */
+    max-width: calc(16.66% - 20px); /* Ensures images fit properly */
+  }
+  
+  .middle-banner-item img {
+    width: 100%;    /* Makes images responsive */
+    height: auto;   /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners for better aesthetics */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow effect */
   }
   
