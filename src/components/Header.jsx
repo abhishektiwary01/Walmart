@@ -26,7 +26,7 @@ export const Header = () => {
     
     
      <div className='logo-holder' role='button'>
-     <img src ='src\assets\logo\walmart-logo.png' onClick={handlehomeclick}/>
+     <img src ='https://s3.amazonaws.com/www-inside-design/uploads/2018/04/walmart-square.jpg' onClick={handlehomeclick}/>
      </div>     
      
      {/* Header Section  */}
@@ -86,7 +86,7 @@ export const Header = () => {
   />
   <button id="search-box button" type="button" className="btn-one">
   <img 
-      src="src\assets\icons\blue-search-icon-23.jpg" 
+      src="https://tse2.mm.bing.net/th?id=OIP.l49NVOjxGUb7NTFQiFGzhwHaHa&pid=Api&P=0&h=180" 
       alt="Search" 
       className="search-icon"
     />
