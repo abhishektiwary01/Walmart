@@ -24,7 +24,7 @@ export const Header = () => {
     
     
      <div className='logo-holder' role='button'>
-     <img src ='src\assets\logo\walmart-logo.png' onClick={handlehomeclick}/>
+     <img src ='...\logo\walmart-logo.png' onClick={handlehomeclick}/>
      </div>     
      
      {/* Header Section  */}
@@ -51,7 +51,7 @@ export const Header = () => {
            <ul className="dropdown-menu">
             <span className='address-image-span'>
                 <span className='address-image'> 
-                <img className = 'ship-image'src ='src\assets\images\shipping.jpg'/>
+                <img className = 'ship-image'src ='.\src\assets\images\shipping.jpg'/>
                 <p className='address-label'>Shipping</p>
                 </span>
                 <span className='address-image'>
