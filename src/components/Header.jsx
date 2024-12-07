@@ -53,15 +53,15 @@ export const Header = () => {
            <ul className="dropdown-menu">
             <span className='address-image-span'>
                 <span className='address-image'> 
-                <img className = 'ship-image'src ='.\src\assets\images\shipping.jpg'/>
+                <img className = 'ship-image'src ='https://img.freepik.com/premium-vector/bus-import-icon-outline-vector-cargo-truck-car-ship-color-flat_96318-120313.jpg?w=826'/>
                 <p className='address-label'>Shipping</p>
                 </span>
                 <span className='address-image'>
-                <img className = 'ship-image' src ='src\assets\images\car-pickup.jpg'/> 
+                <img className = 'ship-image' src ='https://cdn-icons-png.flaticon.com/512/1032/1032921.png'/> 
                 <p className='address-label'> Pickup</p>
                 </span>
                 <span className='address-image'>
-                <img className = 'ship-image' src = 'src\assets\images\shopping-bag-icon.jpg'/>
+                <img className = 'ship-image' src = 'https://static.vecteezy.com/system/resources/previews/000/338/421/original/vector-shopping-bag-icon.jpg'/>
                 <p  className='address-label'> Delivery</p>
                 </span>
             </span>

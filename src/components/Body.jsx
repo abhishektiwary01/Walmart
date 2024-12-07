@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styles/Body.css"; // Include your custom styles here
 import MiddleBanner from "./MiddleBanner";
 
+
 const Body = () => {
   return (
     <div>

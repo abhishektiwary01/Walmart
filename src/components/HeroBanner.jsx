@@ -13,7 +13,7 @@ const HeroBanner = () => {
        <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1331,w_2000,x_0,y_625/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_auto/Sun-glasses_8691-1_cmyk_bhskwf.jpg"></img>
        </div>
        <div className='left-span'>
-       <img src="src\assets\images\Music-offer.jpg"></img>
+       <img src="https://cdn.dribbble.com/userupload/7524016/file/original-3a45f4881c719851f1b639e55de64df3.jpg?resize=1000x1000"></img>
        </div>
        </div>
        <div className='section-b'> 
@@ -22,7 +22,7 @@ const HeroBanner = () => {
        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/8b3340124597183.6107d0ce1bad7.jpg"/>
        </div>  
        <div className='middle-span'>
-       <img src="https://thumbs.dreamstime.com/z/kids-toys-banner-colorful-icons-set-circle-kids-toys-banner-children-playroom-icons-set-circle-stacking-tumbler-163263104.jpg"/>
+       <img src="https://media.istockphoto.com/id/1267056880/vector/banner-and-cute-kids-toys.jpg?s=1024x1024&w=is&k=20&c=2LcILxQ0n-Qnhoy82dO1qumBbH0Pd-xo8dClnvVvs1k="/>
        </div>
        </div>
        <div className='section-c'> 
@@ -34,7 +34,7 @@ const HeroBanner = () => {
        <img src="https://static.vecteezy.com/system/resources/previews/011/594/206/non_2x/flash-sale-banner-template-on-red-background-free-vector.jpg"/>
        </div>
        <div className='right-span'>
-       <img src="src\assets\images\gift-sale.jpg"/>
+       <img src="https://tse4.mm.bing.net/th?id=OIP.aLuCfDeXSJ6jDzkjGAttawHaEm&pid=Api&P=0&h=180"/>
        </div>
        </div>
       </div>
