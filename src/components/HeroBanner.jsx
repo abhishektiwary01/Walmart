@@ -28,7 +28,7 @@ const HeroBanner = () => {
        <div className='section-c'> 
        
        <div className='right-span'>
-       <img src="src\assets\images\christmas-offer.jpg"/>
+       <img src="https://static.vecteezy.com/system/resources/previews/001/951/330/large_2x/special-offer-christmas-sale-up-to-50-off-beautiful-green-discount-banner-with-christmas-tree-branches-garlands-and-cookies-with-a-glass-of-milk-for-santa-claus-vector.jpg"/>
        </div>  
        <div className='right-span'>
        <img src="src\assets\images\flash-deals.jpg"/>
