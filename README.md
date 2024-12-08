@@ -58,7 +58,7 @@ walmart/
 ```
 
 ## Acknowledgements
-- Ajio for the inspiration behind this project.
+- Walmart for the inspiration behind this project.
 - Bootstrap for CSS.
 - Firebase for Authentication.
 
