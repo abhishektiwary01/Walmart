@@ -28,7 +28,7 @@ This is a frontend e-commerce website inspired by Walmart, built with React. It 
 ## Installation
 
 - Clone the repository:
-git clone https://github.com/your-username/ajio-clone.git
+git clone https://github.com/abhishektiwary01/Walmart.git
 - Navigate to the project directory:
 cd ajio-clone
 - Install dependencies:
@@ -54,7 +54,8 @@ walmart/
 ├── index.html    
 ├── package.json  
 ├── vite.config.js         
-└── README.md   ```
+└── README.md   
+```
 
 ## Acknowledgements
 - Ajio for the inspiration behind this project.
