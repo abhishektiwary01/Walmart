@@ -15,7 +15,7 @@ const LoginPage = () => {
 
   // Handler function for the "Your Account" link click
   const handleAccountClick = () => {
-    navigate('/account'); // Navigate to the account/profile page
+    navigate('/signup'); // Navigate to the account/profile page
   };
 
   // Handler function for form submission
