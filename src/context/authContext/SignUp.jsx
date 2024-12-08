@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { app } from "../../firebase/Firebase"; 
 import './styles/SignUp.css';
 
 export const SignUp = () => {
@@ -9,32 +11,57 @@ export const SignUp = () => {
     confirmPassword: '',
   });
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // To track loading state
 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [id]: value }));
   };
 
-  const handleSignup = (event) => {
-    event.preventDefault(); // Prevent form submission
+  const handleSignup = async (event) => {
+    event.preventDefault();
     const { name, email, password, confirmPassword } = formData;
 
+    // Validate that passwords match
     if (password !== confirmPassword) {
       setError('Passwords do not match!');
       return;
     }
 
-    setError(''); // Clear error
-    alert(`Welcome, ${name}! Your account has been created.`);
+    // Clear any previous errors
+    setError('');
+
+    // Set loading state to true
+    setLoading(true);
+
+    try {
+      // Use Firebase Authentication to create a user
+      const auth = getAuth(app);
+      await createUserWithEmailAndPassword(auth, email, password);
+
+      // Once the user is created, show a success message
+      alert(`Welcome, ${name}! Your account has been created.`);
+      
+      // Redirect to login page or home page after sign-up
+      window.location.href = '/login';  // Or you can use `useNavigate` for SPA navigation
+
+    } catch (error) {
+      setError(error.message); // Set the error state if something goes wrong
+    } finally {
+      setLoading(false); // Reset loading state after processing
+    }
   };
 
   return (
     <div className="signup-container">
       <div className="signup-card">
         <h1 className="text-center mb-4">Sign Up</h1>
+
+        {/* Show error message if any */}
         {error && <p id="error" className="text-danger text-center mb-3">{error}</p>}
 
         <form onSubmit={handleSignup}>
+          {/* Full Name Field */}
           <div className="mb-3">
             <label htmlFor="name" className="form-label">Full Name</label>
             <input
@@ -47,6 +74,8 @@ export const SignUp = () => {
               required
             />
           </div>
+
+          {/* Email Field */}
           <div className="mb-3">
             <label htmlFor="email" className="form-label">Email</label>
             <input
@@ -59,6 +88,8 @@ export const SignUp = () => {
               required
             />
           </div>
+
+          {/* Password Field */}
           <div className="mb-3">
             <label htmlFor="password" className="form-label">Password</label>
             <input
@@ -71,6 +102,8 @@ export const SignUp = () => {
               required
             />
           </div>
+
+          {/* Confirm Password Field */}
           <div className="mb-3">
             <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
             <input
@@ -83,15 +116,19 @@ export const SignUp = () => {
               required
             />
           </div>
+
+          {/* Sign Up Button */}
           <button
             type="submit"
             id="signup-btn"
             className="btn btn-primary w-100"
+            disabled={loading} // Disable button while loading
           >
-            Sign Up
+            {loading ? 'Signing Up...' : 'Sign Up'}
           </button>
         </form>
 
+        {/* Login Redirect */}
         <p className="text-center text-muted mt-3">
           Already have an account?{' '}
           <a href="/login" className="text-primary text-decoration-underline">

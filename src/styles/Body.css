@@ -7,11 +7,27 @@ margin: 10px;
     font-size: x-large;
     font-weight:700;
     text-align: start;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-top: 20px;
    
   }
+  .custom-btn {
+    font-size: 16px; /* Smaller font size */
+    width: 20px;
+    height: 20px;
+    padding: 2px 5px; /* Adjust padding */
+    border-radius: 5px; /* Add rounded corners */
+    margin-top: 10px; /* Add spacing above the button */
+    width: fit-content; /* Ensure the button width adjusts to its content */
+  }
   
+  .festive-heading{
+    font-size: x-large;
+    font-weight:700;
+    text-align: start;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
   .cards-wrapper {
     display: flex;
     justify-content: center;
@@ -69,6 +85,7 @@ margin: 10px;
   align-items: center;
   justify-content: center;
   width: 120px;
+  height: 200px;
   padding: 10px; 
   border-radius: 50%;
   /* background-color: #a2caf4; */
@@ -86,6 +103,7 @@ margin: 10px;
   margin-left: 120px;
 }
 .category-card p {
+  font-size: small;
   margin-top: 10px;
   font-size: 14px;
   font-weight: bold;

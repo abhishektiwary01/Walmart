@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { MdMovieCreation } from 'react-icons/md';
-import { doSignInwithEmailAndPassword } from '..//../firebase/Auth'; 
+import { doSignInwithEmailAndPassword } from '../../firebase/Auth';
+import Header from '../../components/Header';
 
 const LoginPage = () => {
   // State variables for email and password
@@ -13,9 +13,9 @@ const LoginPage = () => {
   // Hook to programmatically navigate to different routes
   const navigate = useNavigate();
 
-  // Handler function for the "Sign Up" link click
-  const handleSignUpClick = () => {
-    navigate('/signup'); // Navigate to the Sign Up page
+  // Handler function for the "Your Account" link click
+  const handleAccountClick = () => {
+    navigate('/account'); // Navigate to the account/profile page
   };
 
   // Handler function for form submission
@@ -43,71 +43,69 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
-      {/* Logo and App Title */}
-      <div className="mb-8 text-center">
-        <MdMovieCreation size={48} className="text-red-600 mx-auto" aria-label="App Logo" />
-        <p className="text-white text-3xl mt-2">Entertainment App</p>
-      </div>
+ <div><Header></Header>
+    <div className="container">
       
       {/* Login Form Container */}
-      <div className="w-full max-w-sm bg-slate-900 shadow-md rounded-lg p-8 border border-slate-700">
-        <h2 className="text-2xl font-bold mb-6 text-white">Login</h2>
-        
-        {/* Login Form */}
-        <form onSubmit={handleSubmit}>
-          {/* Email Input Field */}
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-white mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+      <div className="w-100 d-flex justify-content-center align-items-center mt-5">
+        <div className="card p-4 w-100" style={{ maxWidth: '400px' }}>
+          <h2 className="text-center mb-4">Login</h2>
           
-          {/* Password Input Field */}
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-white mb-2">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
-          
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Login
-          </button>
-          
-          {/* Sign Up Prompt */}
-          <p className="text-white mt-3 flex items-center justify-center">
-            Don't have an account?
-            <span
-              onClick={handleSignUpClick}
-              className="ml-1 text-red-600 hover:text-white cursor-pointer"
+          {/* Login Form */}
+          <form onSubmit={handleSubmit}>
+            {/* Email Input Field */}
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="form-control"
+                required
+              />
+            </div>
+            
+            {/* Password Input Field */}
+            <div className="mb-4">
+              <label htmlFor="password" className="form-label">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="form-control"
+                required
+              />
+            </div>
+            
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="btn btn-danger w-100"
             >
-              Sign Up
-            </span>
-          </p>
-        </form>
+              Login
+            </button>
+            
+            {/* Account Prompt */}
+            <p className="text-center mt-3">
+              Don't have an account? 
+              <span
+                onClick={handleAccountClick}
+                className="text-danger cursor-pointer"
+              >
+                SignUp
+              </span>
+            </p>
+          </form>
+        </div>
       </div>
 
       {/* Toast Container for displaying notifications */}
       <ToastContainer />
-    </div>
+    </div></div>
   );
 };
 

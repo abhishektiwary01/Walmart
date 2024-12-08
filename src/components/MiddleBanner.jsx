@@ -3,41 +3,23 @@ import "../styles/MiddleBanner.css";
 
 const MiddleBanner = () => {
   return (
-    <div className="middle-banner">
-      <div className="middle-banner-item">
+    <div className="middle-banner-container">
+      
+      {/* First Banner */}
+      <div className="banner">
         <img
-          src="https://image.freepik.com/free-vector/honey-infused-perfume-banner_1268-10639.jpg"
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/6f704160193483.5a4132925d935.gif"
           alt="Honey Infused Perfume"
+          className="banner-image"
         />
       </div>
-      <div className="middle-banner-item">
+
+      {/* Second Banner */}
+      <div className="banner">
         <img
-          src="https://www.byrdie.com/thmb/QPo_i3-oMzfSttK612jZ8tUtOaY=/900x0/filters:no_upscale():max_bytes(150000):strip_icc()/75609190490-359b928722bc401d843ad4abf639bdac.jpg"
-          alt="Byrdie Product 1"
-        />
-      </div>
-      <div className="middle-banner-item">
-        <img
-          src="https://www.byrdie.com/thmb/Vr15dDiDb0yaTtbxV64DFy3wKP8=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/2131025-a2d151ee86ed4c648a1a2000cecca386.jpg"
-          alt="Byrdie Product 2"
-        />
-      </div>
-      <div className="middle-banner-item">
-        <img
-          src="https://image.freepik.com/free-vector/honey-infused-perfume-banner_1268-10639.jpg"
-          alt="Honey Infused Perfume"
-        />
-      </div>
-      <div className="middle-banner-item">
-        <img
-          src="https://www.byrdie.com/thmb/QPo_i3-oMzfSttK612jZ8tUtOaY=/900x0/filters:no_upscale():max_bytes(150000):strip_icc()/75609190490-359b928722bc401d843ad4abf639bdac.jpg"
-          alt="Byrdie Product 1"
-        />
-      </div>
-      <div className="middle-banner-item">
-        <img
-          src="https://www.byrdie.com/thmb/Vr15dDiDb0yaTtbxV64DFy3wKP8=/800x800/filters:no_upscale():max_bytes(150000):strip_icc()/2131025-a2d151ee86ed4c648a1a2000cecca386.jpg"
-          alt="Byrdie Product 2"
+          src="https://thumbs.dreamstime.com/z/christmas-tree-banner-background-xmas-design-horizontal-poster-greeting-cards-headers-website-260883025.jpg"
+          alt="Christmas Tree"
+          className="banner-image"
         />
       </div>
     </div>
