@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  server: {
+    host: 'localhost',  // Ensure the server listens on localhost
+    port: 5173,         // Make sure the port matches your setup
+    strictPort: true,   // Prevent Vite from switching ports automatically
+    hmr: {
+      protocol: 'ws',   // WebSocket protocol
+      host: 'localhost',
+      port: 5173,
+    },
+  },
+});

@@ -1,29 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { IoCartOutline } from "react-icons/io5";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import { CiLocationOn } from "react-icons/ci";
 import '../styles/Header.css';
 import { useNavigate } from 'react-router-dom';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { app } from '..//firebase/Firebase'; // Adjust based on your Firebase setup
 
-export const Header = () => {
+const Header = ({ user }) => {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null); // Store user state
-
-  // Firebase authentication listener to track user's login state
-  useEffect(() => {
-    const auth = getAuth(app);
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser); // Set user data if logged in
-      } else {
-        setUser(null); // Set user to null if not logged in
-      }
-    });
-
-    return () => unsubscribe(); // Cleanup on component unmount
-  }, []);
+  const [query, setQuery] = React.useState('');
 
   const handleHomeClick = () => {
     navigate('/');
@@ -39,16 +23,16 @@ export const Header = () => {
     }
   };
 
-  const [query, setQuery] = useState('');
-
   const handleSearch = () => {
     if (query) {
       window.location.href = `https://www.walmart.com/search/?query=${query}`;
     }
   };
- const handlecartclick=()=>{
-  navigate('./cart')
- }
+
+  const handleCartClick = () => {
+    navigate('./cart');
+  };
+
   return (
     <div className='header-container'>
       {/* Logo */}
@@ -146,12 +130,11 @@ export const Header = () => {
         <span>
           <button className='cart-buttons' onClick={handleSignIn}>
             {user ? 'Your' : 'Sign In'}
-            <p className='cart-label'>{user ? 'Account' : 'Accounts'}</p>
+            <p className='cart-label'>{user ? 'Account' : 'Account'}</p>
           </button>
         </span>
-
         <span>
-          <button className='cart-buttons' onClick={handlecartclick}>
+          <button className='cart-buttons' onClick={handleCartClick}>
             <IoCartOutline className='cart-icon' />
             <p>$ 0.00</p>
           </button>

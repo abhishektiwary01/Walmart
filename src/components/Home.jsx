@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-import { Header } from './Header';
+import Header  from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import HeroBanner from './HeroBanner';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
-import { signOut } from 'firebase/auth'; // Firebase sign-out method
-import { auth } from '../firebase/Firebase'; // Assuming you have Firebase initialized in this file
+// import { signOut } from 'firebase/auth'; // Firebase sign-out method
+// import { auth } from '../firebase/Firebase'; // Assuming you have Firebase initialized in this file
 import Header from './Header';
 import '../styles/Accounts.css';
 

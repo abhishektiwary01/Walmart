@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import "../styles/FashionCarousel.css"
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const FashionCarousel = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+
   // Fetch products data from the API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://api.escuelajs.co/api/v1/products');
+        const response = await fetch('http://localhost:5000/api/product/products');
         const data = await response.json();
         setProducts(data.slice(0, 12)); // Limit to the first 12 products
       } catch (error) {
@@ -22,33 +21,35 @@ const FashionCarousel = () => {
     fetchProducts();
   }, []);
 
-  // const handleFashionclick =()=>{
-  //   navigate('./products')
-  // }
+  // Navigate to the ProductPage when a product is clicked
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`); // Navigate to ProductPage with product ID
+  };
 
   return (
-    <div className="fashion-carousel-container" role='button' >
-      <div
-        id="carouselFashion"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
+    <div className="fashion-carousel-container" role="button">
+      <div id="carouselFashion" className="carousel slide" data-bs-ride="carousel">
         <p className="festive-heading">Fashion Hub</p>
         <div className="carousel-inner">
           {/* Carousel Item 1 */}
-          <div className="carousel-item active">
+          <div className={`carousel-item ${products.length > 0 ? 'active' : ''}`}>
             <div className="cards-wrapper d-flex flex-wrap justify-content-around">
               {/* Map over the first 6 products */}
               {products.slice(0, 6).map((product) => (
-                <div className="card" key={product.id}>
+                <div
+                  className="card"
+                  key={product._id}
+                  onClick={() => handleProductClick(product._id)} // Add click handler
+                  style={{ cursor: "pointer" }}
+                >
                   <img
-                    src={product.images[0]}
+                    src={product.image && product.image[0]}
                     className="card-img-top"
                     alt={product.title}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{product.title}</h5>
-                    <p className="card-text">${product.price}</p>
+                    <p className="card-text">${product.price.amount}</p>
                   </div>
                 </div>
               ))}
@@ -60,15 +61,20 @@ const FashionCarousel = () => {
             <div className="cards-wrapper d-flex flex-wrap justify-content-around">
               {/* Map over the next 6 products */}
               {products.slice(6, 12).map((product) => (
-                <div className="card" key={product.id}>
+                <div
+                  className="card"
+                  key={product._id}
+                  onClick={() => handleProductClick(product._id)} // Add click handler
+                  style={{ cursor: "pointer" }}
+                >
                   <img
-                    src={product.images[0]}
+                    src={product.images && product.images[0]}
                     className="card-img-top"
                     alt={product.title}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{product.title}</h5>
-                    <p className="card-text">${product.price}</p>
+                    <p className="card-text">${product.price.amount}</p>
                   </div>
                 </div>
               ))}
@@ -98,6 +104,6 @@ const FashionCarousel = () => {
       </div>
     </div>
   );
-}
+};
 
 export default FashionCarousel;

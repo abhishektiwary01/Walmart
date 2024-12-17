@@ -22,7 +22,11 @@ const Body = () => {
     const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(savedCart);
   }, []);
+   
 
+  const productClick =( )=> {
+  navigate('/products')
+  }
   // Add product to the cart
   const addToCart = (product) => {
     const updatedCart = [...cart, product];
@@ -56,7 +60,7 @@ const handlefeedback =()=>{
             className="card-img-top"
             alt="Placeholder"
           />
-          <div className="card-body">
+          <div className="card-body" role='button' onClick={productClick}>
             <h5 className="card-title">Nike Kids Gallai</h5>
             <p className="card-text">$43</p>
             <button className="btn btn-primary btn-sm custom-btn" onClick={addToCart}>Add to Cart</button>
@@ -64,7 +68,7 @@ const handlefeedback =()=>{
           </div>
         </div>
         {/* Card 2 */}
-        <div className="card">
+        <div className="card" role='button' onClick={productClick}>
           <img
             src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d73d824c991b45c1a436ae940143b34b_9366/D_Rose_Son_of_Chi_2.0_Shoes_Black_GY6497_01_standard.jpg"
             className="card-img-top"
@@ -77,7 +81,7 @@ const handlefeedback =()=>{
           </div>
         </div>
         {/* Card 3 */}
-        <div className="card">
+        <div className="card" role='button' onClick={productClick}>
           <img
             src="https://staticc.sportskeeda.com/editor/2023/02/59a86-16769779330644-1920.jpg"
             className="card-img-top"
